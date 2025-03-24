@@ -2,7 +2,7 @@
 
 ## Sovelluksen tarkoitus
 
-Kuntosali-tracker sovelluksen avulla käyttäjä voi seurata kuntosaliharjoituksiaan. Sovellus tallentaa tiedot harjoituksista (liikkeet, setit, toistot, painot, muistiinpanot ja ajankohta) tietokantaan, ja mahdollistaa näiden tietojen tarkastelun ja muokkaamisen. Kaikki tiedot tallennetaan paikallisesti, eikä ole käyttäjätilejä.
+Kuntosaliseurantasovelluksen avulla käyttäjä voi seurata kuntosaliharjoituksiaan. Sovellus tallentaa tiedot harjoituksista (liikkeet, setit, toistot, painot, muistiinpanot ja ajankohta) tietokantaan, ja mahdollistaa näiden tietojen tarkastelun ja muokkaamisen. Kaikki tiedot tallennetaan paikallisesti, eikä ole käyttäjätilejä.
 
 ## Käyttöliittymäluonnos
 
