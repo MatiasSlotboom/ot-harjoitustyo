@@ -1,0 +1,7 @@
+## Viikko 3
+
+- Käyttäjä näkee listan kaikista treeneistä ja pysty tarkastelemaan niitä
+- Lisätty repositorio luokat treeneille, liikkeille, ja sarjoille
+- Lisätty entity luokat treeneille, liikkeille, ja sarjoille
+- Lisätty service luokat treeneille, liikkeille, ja sarjoille
+- Testattu, että liike-luokka palauttaa kaiken oikein
