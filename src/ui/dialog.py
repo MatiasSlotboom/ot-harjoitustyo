@@ -24,7 +24,6 @@ class EntryDialog(Toplevel):
 
         self.protocol("WM_DELETE_WINDOW", self._cancel)
         self.geometry(f"+{parent.winfo_rootx()+50}+{parent.winfo_rooty()+50}")
-        self.initial_focus.focus_set()
         self.wait_window(self)
 
     def _body(self, master):
