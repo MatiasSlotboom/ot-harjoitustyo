@@ -46,4 +46,5 @@ class WorkoutService:
             full_exercises_details.append({'exercise': exercise, 'sets': sets})
         return {'workout': workout, 'exercises': full_exercises_details}
 
+
 workout_service = WorkoutService()

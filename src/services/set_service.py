@@ -7,7 +7,8 @@ class SetService:
         self._set_repository = set_repository
 
     def add_set(self, exercise_id: int, set_number: int, repetitions: int, weight: float):
-        set_instance = Set(exercise_id=exercise_id, set_number=set_number, repetitions=repetitions, weight=weight)
+        set_instance = Set(exercise_id=exercise_id, set_number=set_number,
+                           repetitions=repetitions, weight=weight)
         return self._set_repository.create(set_instance)
 
     def get_sets_for_exercise(self, exercise_id: int):
@@ -27,5 +28,6 @@ class SetService:
 
     def delete_set(self, set_id: int):
         self._set_repository.delete(set_id)
+
 
 set_service = SetService()

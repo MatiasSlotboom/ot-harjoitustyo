@@ -17,7 +17,8 @@ class SetRepository:
         cursor = self._connection.cursor()
         cursor.execute(
             "insert into sets (exercise_id, set_number, repetitions, weight) values (?, ?, ?, ?)",
-            (set_obj.exercise_id, set_obj.set_number, set_obj.repetitions, set_obj.weight)
+            (set_obj.exercise_id, set_obj.set_number,
+             set_obj.repetitions, set_obj.weight)
         )
         self._connection.commit()
         return set_obj
@@ -32,13 +33,13 @@ class SetRepository:
         return list(map(get_set_by_row, rows))
 
     def find_by_id(self, set_id):
-         cursor = self._connection.cursor()
-         cursor.execute(
-             "select id, exercise_id, set_number, repetitions, weight from sets where id = ?",
-             (set_id,)
-         )
-         row = cursor.fetchone()
-         return get_set_by_row(row)
+        cursor = self._connection.cursor()
+        cursor.execute(
+            "select id, exercise_id, set_number, repetitions, weight from sets where id = ?",
+            (set_id,)
+        )
+        row = cursor.fetchone()
+        return get_set_by_row(row)
 
     def update(self, set_obj):
         if set_obj.id is None:

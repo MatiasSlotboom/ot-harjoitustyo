@@ -7,7 +7,8 @@ class ExerciseService:
         self._exercise_repository = exercise_repository
 
     def add_exercise(self, workout_id: int, exercise_name: str, note: str = None):
-        exercise = Exercise(workout_id=workout_id, exercise_name=exercise_name, note=note)
+        exercise = Exercise(workout_id=workout_id,
+                            exercise_name=exercise_name, note=note)
         return self._exercise_repository.create(exercise)
 
     def get_exercises_for_workout(self, workout_id: int):
@@ -26,5 +27,6 @@ class ExerciseService:
 
     def delete_exercise(self, exercise_id: int):
         self._exercise_repository.delete(exercise_id)
+
 
 exercise_service = ExerciseService()

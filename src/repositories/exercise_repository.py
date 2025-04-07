@@ -34,15 +34,15 @@ class ExerciseRepository:
     def find_by_id(self, exercise_id):
         cursor = self._connection.cursor()
         cursor.execute(
-             "select id, workout_id, exercise_name, note from exercises where id = ?",
-             (exercise_id,)
+            "select id, workout_id, exercise_name, note from exercises where id = ?",
+            (exercise_id,)
         )
         row = cursor.fetchone()
         return get_exercise_by_row(row)
 
     def update(self, exercise):
         if exercise.id is None:
-             raise ValueError("Exercise must have an ID to be updated")
+            raise ValueError("Exercise must have an ID to be updated")
         cursor = self._connection.cursor()
         cursor.execute(
             "update exercises set exercise_name = ?, note = ? where id = ?",

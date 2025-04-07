@@ -41,9 +41,11 @@ class EntryDialog(Toplevel):
 
     def _buttonbox(self):
         box = Frame(self)
-        ok_button = Button(box, text="OK", width=10, command=self._ok, default='active')
+        ok_button = Button(box, text="OK", width=10,
+                           command=self._ok, default='active')
         ok_button.pack(side='left', padx=5, pady=5)
-        cancel_button = Button(box, text="Cancel", width=10, command=self._cancel)
+        cancel_button = Button(
+            box, text="Cancel", width=10, command=self._cancel)
         cancel_button.pack(side='left', padx=5, pady=5)
         self.bind("<Return>", self._ok)
         self.bind("<Escape>", self._cancel)

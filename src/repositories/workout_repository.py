@@ -22,7 +22,8 @@ class WorkoutRepository:
 
     def find_all(self):
         cursor = self._connection.cursor()
-        cursor.execute("SELECT id, workout_date FROM workouts ORDER BY workout_date DESC")
+        cursor.execute(
+            "SELECT id, workout_date FROM workouts ORDER BY workout_date DESC")
         rows = cursor.fetchall()
         return [get_workout_by_row(row) for row in rows]
 
@@ -36,15 +37,15 @@ class WorkoutRepository:
         return get_workout_by_row(row)
 
     def update(self, workout):
-         if workout.id is None:
-             raise ValueError("Workout must have an ID to be updated")
-         cursor = self._connection.cursor()
-         cursor.execute(
-             "UPDATE workouts SET workout_date = ? WHERE id = ?",
-             (workout.workout_date, workout.id)
-         )
-         self._connection.commit()
-         return workout
+        if workout.id is None:
+            raise ValueError("Workout must have an ID to be updated")
+        cursor = self._connection.cursor()
+        cursor.execute(
+            "UPDATE workouts SET workout_date = ? WHERE id = ?",
+            (workout.workout_date, workout.id)
+        )
+        self._connection.commit()
+        return workout
 
     def delete(self, workout_id):
         cursor = self._connection.cursor()
