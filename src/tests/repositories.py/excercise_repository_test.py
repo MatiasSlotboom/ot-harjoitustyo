@@ -18,9 +18,6 @@ class TestExerciseRepository(unittest.TestCase):
         self.exercise_2 = Exercise(workout_id=self.workout_id_1, exercise_name="Squats", note="Bodyweight")
         self.exercise_3 = Exercise(workout_id=self.workout_id_2, exercise_name="Pull-ups", note="Assisted")
 
-    def test_hello_world(self):
-        self.assertEqual("Hello world", "Hello world")
-
     def test_create_exercise(self):
         self.exercise_repository.create(self.exercise_1)
 
@@ -98,7 +95,6 @@ class TestExerciseRepository(unittest.TestCase):
             self.exercise_repository.update(exercise_no_id)
         
         self.assertEqual(str(cm.exception), "Exercise must have an ID to be updated")
-
 
     def test_delete_exercise(self):
         self.exercise_repository.create(self.exercise_1)

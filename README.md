@@ -13,7 +13,12 @@ Harjoitustyössä kehitän yksinkertaisen *Kuntosaliseurantasovelluksen*, perust
 poetry install
 ```
 
-2. Sovellus käynnistyy komennolla:
+2. Sovelluksen tietokannan luominen komennolla:
+
+```bash
+poetry run invoke build
+```
+3. Sovellus käynnistyy komennolla:
 
 ```bash
 poetry run invoke start
