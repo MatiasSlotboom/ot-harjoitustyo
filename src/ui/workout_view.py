@@ -81,7 +81,7 @@ class WorkoutView:
         hsb.pack(side=constants.BOTTOM, fill=constants.X)
         self._exercises_tree.pack(fill=constants.BOTH, expand=True)
         self._exercises_tree.bind("<Double-Button-1>",
-                           self._handle_edit_selected)
+                                  self._handle_edit_selected)
 
         action_frame = ttk.Frame(master=self._frame)
         action_frame.pack(fill=constants.X, padx=10, pady=10)

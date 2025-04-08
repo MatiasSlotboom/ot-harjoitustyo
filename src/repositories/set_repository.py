@@ -16,10 +16,11 @@ class SetRepository:
     def create(self, set_obj):
         cursor = self._connection.cursor()
         cursor.execute(
-            "insert into sets (exercise_id, set_number, repetitions, weight) values (?, ?, ?, ?)",
+            "insert into sets (exercise_id, set_number, repetitions, weight) values (?, ?, ?, ?) returning id",
             (set_obj.exercise_id, set_obj.set_number,
              set_obj.repetitions, set_obj.weight)
         )
+        set_obj.id = cursor.fetchone()[0]
         self._connection.commit()
         return set_obj
 

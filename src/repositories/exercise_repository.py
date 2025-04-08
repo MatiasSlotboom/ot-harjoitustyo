@@ -16,9 +16,11 @@ class ExerciseRepository:
     def create(self, exercise):
         cursor = self._connection.cursor()
         cursor.execute(
-            "insert into exercises (workout_id, exercise_name, note) values (?, ?, ?)",
+            "insert into exercises (workout_id, exercise_name, note) values (?, ?, ?) returning id",
             (exercise.workout_id, exercise.exercise_name, exercise.note)
         )
+
+        exercise.id = cursor.fetchone()[0]
         self._connection.commit()
         return exercise
 
