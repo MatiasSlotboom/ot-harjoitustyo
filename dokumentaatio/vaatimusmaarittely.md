@@ -14,18 +14,18 @@ Sovellus voisi koostua esimerkiksi seuraavista näkymistä (tarkentuu suunnittel
 
 ## Tarjottava toiminnallisuus
 
--   Käyttäjä näkee listan aiemmista treeneistään (esim. päivämäärän mukaan järjestettynä kalenteri-tapaisesti).
--   Käyttäjä voi lisätä uuden treenin. Treenin lisäämisen yhteydessä:
+-   Käyttäjä näkee listan aiemmista treeneistään (esim. päivämäärän mukaan järjestettynä kalenteri-tapaisesti). **Tehty**
+-   Käyttäjä voi lisätä uuden treenin. Treenin lisäämisen yhteydessä: **Tehty**
     -   Käyttäjä voi lisätä yhden tai useamman liikkeen.
     -   Jokaiselle liikkeelle määritellään:
         -   Liikkeen nimi (esim. "Penkkipunnerrus").
         -   Settien määrä.
         -   Jokaiselle setille: toistojen määrä ja käytetty paino.
         -   Vapaamuotoinen muistiinpano (esim. "Kevyt sarja (palautumassa)").
-    -   Treenille asetetaan päivämäärä ja kellonaika (oletuksena treenin luontihetki, mutta käyttäjän muokattavissa).
--   Käyttäjä voi tarkastella yksittäisen treenin tietoja.
--   Käyttäjä voi muokata olemassa olevan treenin tietoja.
--   Käyttäjä voi poistaa treenin.
+    -   Treenille asetetaan päivämäärä ja kellonaika (oletuksena treenin luontihetki, mutta käyttäjän muokattavissa). **Tehty**
+-   Käyttäjä voi tarkastella yksittäisen treenin tietoja. **Tehty**
+-   Käyttäjä voi muokata olemassa olevan treenin tietoja. **Tehty**
+-   Käyttäjä voi poistaa treenin. **Tehty**
 
 ## Jatkokehitysideoita
 

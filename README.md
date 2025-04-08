@@ -42,3 +42,11 @@ poetry run invoke coverage-report
 ```
 
 Komennon valmistettua _htmlcov_-hakemistosta löytyy html tiedosto jonka voi avata selaimella.
+
+### Pylint
+
+Tiedoston [.pylintrc](./.pylintrc) määrittelemät formatointitarkastus voi suorittaa komennolla:
+
+```bash
+poetry run invoke lint
+```
