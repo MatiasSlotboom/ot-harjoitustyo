@@ -5,8 +5,7 @@ from entities.exercise import Exercise
 def get_exercise_by_row(row):
     if row:
         return Exercise(id=row["id"], workout_id=row["workout_id"], exercise_name=row["exercise_name"], note=row["note"])
-    else:
-        return None
+    return None
 
 
 class ExerciseRepository:

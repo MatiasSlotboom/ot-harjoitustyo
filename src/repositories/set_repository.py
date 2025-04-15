@@ -4,9 +4,9 @@ from entities.set import Set
 
 def get_set_by_row(row):
     if row:
-        return Set(id=row["id"], exercise_id=row["exercise_id"], set_number=row["set_number"], repetitions=row["repetitions"], weight=row["weight"])
-    else:
-        return None
+        return Set(id=row["id"], exercise_id=row["exercise_id"],
+                   set_number=row["set_number"], repetitions=row["repetitions"], weight=row["weight"])
+    return None
 
 
 class SetRepository:

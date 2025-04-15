@@ -52,7 +52,8 @@ class WorkoutView:
 
         self._exercises_tree = ttk.Treeview(
             master=tree_frame,
-            columns=("type", "name_note", "set_num", "reps", "weight", "weightlb"),
+            columns=("type", "name_note", "set_num",
+                     "reps", "weight", "weightlb"),
             show="tree headings"
         )
 

@@ -3,7 +3,9 @@ from entities.workout import Workout
 
 
 def get_workout_by_row(row):
-    return Workout(id=row["id"], workout_date=row["workout_date"]) if row else None
+    if row:
+        return Workout(id=row["id"], workout_date=row["workout_date"])
+    return None
 
 
 class WorkoutRepository:
