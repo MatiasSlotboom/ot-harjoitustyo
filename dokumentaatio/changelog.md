@@ -12,3 +12,8 @@
 - Parannettu repositorio joka tukee service luokkia
 - Testaus laajenettu
 - Dokumentaatio ja arkkitehtuuri kehitetty
+
+# Viikko 5
+
+- Lisännyt toiminnan että näkyy paino puntina
+- Parantanut pylintin määritelmää laatua

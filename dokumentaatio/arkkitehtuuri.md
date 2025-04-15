@@ -96,6 +96,10 @@ classDiagram
     UI ..> WorkoutService : uses
     UI ..> ExerciseService : uses
     UI ..> SetService : uses
+
+    WorkoutRepository ..> Workout : uses
+    ExerciseRepository ..> Exercise : uses
+    SetRepository ..> Set : uses
 ```
 
 Jokainen näistä on toteutettu omana luokkana

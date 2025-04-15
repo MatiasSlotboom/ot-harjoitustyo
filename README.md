@@ -1,6 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
 
 Harjoitustyössä kehitän yksinkertaisen *Kuntosaliseurantasovelluksen*, perustuen Tkinter kirjastoon joka auttaa käyttäjää **tallentaa**, **vertailla** ja **tutkia** treenejään.
+Uusin julkaistu versio löytyy [täältä](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/latest)
+
+[Uusin julkaisu]()
 
 [Vaatimusmäärittely](dokumentaatio/vaatimusmaarittely.md)
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
