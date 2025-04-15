@@ -98,4 +98,4 @@ classDiagram
     UI ..> SetService : uses
 ```
 
-Jokainen näistä on toteutettu omana luokkana ![Yes](./pictures/check.png)
+Jokainen näistä on toteutettu omana luokkana
