@@ -52,7 +52,7 @@ class WorkoutView:
 
         self._exercises_tree = ttk.Treeview(
             master=tree_frame,
-            columns=("type", "name_note", "set_num", "reps", "weight"),
+            columns=("type", "name_note", "set_num", "reps", "weight", "weightlb"),
             show="tree headings"
         )
 
@@ -69,6 +69,7 @@ class WorkoutView:
         self._exercises_tree.heading("set_num", text="Set #")
         self._exercises_tree.heading("reps", text="Reps")
         self._exercises_tree.heading("weight", text="Weight (kg)")
+        self._exercises_tree.heading("weightlb", text="Weight (lb)")
 
         self._exercises_tree.column("#0", width=50, stretch=False)
         self._exercises_tree.column("type", width=80, anchor='center')
@@ -76,6 +77,7 @@ class WorkoutView:
         self._exercises_tree.column("set_num", width=60, anchor='center')
         self._exercises_tree.column("reps", width=60, anchor='center')
         self._exercises_tree.column("weight", width=80, anchor='center')
+        self._exercises_tree.column("weightlb", width=80, anchor='center')
 
         vsb.pack(side=constants.RIGHT, fill=constants.Y)
         hsb.pack(side=constants.BOTTOM, fill=constants.X)
@@ -123,7 +125,7 @@ class WorkoutView:
                             constants.END,
                             text=f"E{exercise.id}",
                             values=("Exercise", exercise.exercise_name,
-                                    "", "", ""),
+                                    "", "", "", ""),
                             open=True
                         )
                         self._exercise_map[ex_item_id] = exercise.id
@@ -139,7 +141,7 @@ class WorkoutView:
                                     constants.END,
                                     text=f"S{set_instance.id}",
                                     values=("Set", "", set_instance.set_number,
-                                            set_instance.repetitions, set_instance.weight)
+                                            set_instance.repetitions, set_instance.weight, round(set_instance.weight*2.20462262, 2))
                                 )
                                 self._set_map[set_item_id] = set_instance.id
             else:
