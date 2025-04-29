@@ -17,3 +17,7 @@
 
 - Lisännyt toiminnan että näkyy paino puntina
 - Parantanut pylintin määritelmää laatua
+
+# Viikko 6
+
+- Lisännyt väärän päivämäärä-formaatin syötön ja automaattisen korjauksen

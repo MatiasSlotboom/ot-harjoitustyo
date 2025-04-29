@@ -8,6 +8,7 @@ Uusin julkaistu versio löytyy [täältä](https://github.com/MatiasSlotboom/ot-
 [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 [Changelog](dokumentaatio/changelog.md)
 [Arkkitehtuuri](dokumentaatio/arkkitehtuuri.md)
+[Kayttöohje](dokumentaatio/kayttoohje.md)
 
 
 1. Asenna riippuvuudet komennolla:
@@ -52,3 +53,6 @@ Tiedoston [.pylintrc](./.pylintrc) määrittelemät formatointitarkastus voi suo
 ```bash
 poetry run invoke lint
 ```
+
+Release viikko 5: [Viikko 5](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/tag/Viikko5)
+Release viikko 6: [Viikko 5](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/tag/Viikko6)

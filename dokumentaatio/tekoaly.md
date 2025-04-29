@@ -1,0 +1,1 @@
+Geminita on käytetty ideointiin, koodin tarkastukseen, refraktorointiin, korjauksiin ja parannuksiin.
