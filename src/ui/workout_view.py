@@ -157,7 +157,8 @@ class WorkoutView:
     def _handle_save_workout(self):
         date_str = self._workout_date_var.get()
         try:
-            datetime.datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+            parsed_date = datetime.datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+            formatted_date_str = parsed_date.strftime('%Y-%m-%d %H:%M:%S')
         except ValueError:
             messagebox.showerror(
                 "Invalid Date", "enter the date in YYYY-MM-DD HH:MM:SS format.")
@@ -165,14 +166,15 @@ class WorkoutView:
 
         try:
             if self._workout_id:
-                workout_service.update_workout_date(self._workout_id, date_str)
+                workout_service.update_workout_date(self._workout_id, formatted_date_str)
                 messagebox.showinfo(
                     "Saved", "Workout date updated. Exercises/Sets are saved via their respective Add/Edit actions.")
             else:
-                new_workout = workout_service.create_workout(date_str)
+                new_workout = workout_service.create_workout(formatted_date_str)
                 self._workout_id = new_workout.id
                 messagebox.showinfo(
                     "Created", f"New workout created with ID: {self._workout_id}. You can now add exercises and sets.")
+            self._workout_date_var.set(formatted_date_str)
         except Exception as e:
             messagebox.showerror("Error", f"Failed to save workout: {e}")
 
