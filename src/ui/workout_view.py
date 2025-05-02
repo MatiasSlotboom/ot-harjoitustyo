@@ -180,9 +180,7 @@ class WorkoutView:
 
     def _handle_add_exercise(self):
         if not self._workout_id:
-            messagebox.showwarning(
-                "Save Workout First", "save the initial workout details (date) before adding exercises.")
-            return
+            self._handle_save_workout()
 
         dialog = EntryDialog(self._frame, "Add Exercise", {
                              "Name": "", "Note (optional)": ""})
