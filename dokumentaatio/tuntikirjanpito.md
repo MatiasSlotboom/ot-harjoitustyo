@@ -11,4 +11,6 @@
 |  8.4. | 3      | Testejen luominen, ongelmien korjaaminen, dokumentaatiota ja kaavoja kehittänyt |
 | 15.4. | 6      | Toiminnan laajentaminen, pylint parantaminen ja dokumentaatiota |
 | 29.4  | 5      | Toiminnan laajentaminen, dokumentaatio |
-|  yht. | 34     |
+|  2.5. | 1      | Toiminnan laajentaminen |
+| 11.5. | 8      | Dokumentaation kehitys, pylint parantaminen |
+|  yht. | 43     |
