@@ -55,4 +55,4 @@ poetry run invoke lint
 ```
 
 Release viikko 5: [Viikko 5](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/tag/Viikko5)
-Release viikko 6: [Viikko 5](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/tag/Viikko6)
+Release viikko 6: [Viikko 6](https://github.com/MatiasSlotboom/ot-harjoitustyo/releases/tag/Viikko6)
