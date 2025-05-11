@@ -11,7 +11,12 @@ def get_exercise_by_row(row):
         A Exercise object with the data from the row.
     '''
     if row:
-        return Exercise(id=row["id"], workout_id=row["workout_id"], exercise_name=row["exercise_name"], note=row["note"])
+        return Exercise(
+            excercise_id=row["id"],
+            workout_id=row["workout_id"],
+            exercise_name=row["exercise_name"],
+            note=row["note"]
+        )
     return None
 
 

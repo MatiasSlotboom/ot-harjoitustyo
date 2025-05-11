@@ -10,7 +10,14 @@ class Set:
         weight: The weight used for the set.
     '''
 
-    def __init__(self, exercise_id: int, set_number: int, repetitions: int, weight: float, id: int = None):
+    def __init__(
+        self,
+        exercise_id: int,
+        set_number: int,
+        repetitions: int,
+        weight: float,
+        set_id: int = None
+    ):
         '''
         Initializes a Set object.
         Args:
@@ -18,9 +25,9 @@ class Set:
             set_number: The number of the set.
             repetitions: The number of repetitions for the set.
             weight: The weight used for the set.
-            id: An optional ID for the set (used when retrieving from the database).
+            set_id: An optional ID for the set (used when retrieving from the database).
         '''
-        self.id = id
+        self.id = set_id
         self.exercise_id = exercise_id
         self.set_number = set_number
         self.repetitions = repetitions

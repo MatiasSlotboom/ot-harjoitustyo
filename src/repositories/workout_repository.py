@@ -11,7 +11,7 @@ def get_workout_by_row(row):
         A Workout object with the data from the row.
     '''
     if row:
-        return Workout(id=row["id"], workout_date=row["workout_date"])
+        return Workout(workout_id=row["id"], workout_date=row["workout_date"])
     return None
 
 

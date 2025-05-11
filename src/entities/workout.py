@@ -6,12 +6,12 @@ class Workout:
         workout_date: The date of the workout.
     '''
 
-    def __init__(self, workout_date: str, id: int = None):
+    def __init__(self, workout_date: str, workout_id: int = None):
         '''
         Initializes a Workout object.
         Args:
             workout_date: The date of the workout.
-            id: An optional ID for the workout (used when retrieving from the database).
+            workout_id: An optional ID for the workout (used when retrieving from the database).
         '''
-        self.id = id
+        self.id = workout_id
         self.workout_date = workout_date

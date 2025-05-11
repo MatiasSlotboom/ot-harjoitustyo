@@ -11,8 +11,13 @@ def get_set_by_row(row):
         A Set object with the data from the row.
     '''
     if row:
-        return Set(id=row["id"], exercise_id=row["exercise_id"],
-                   set_number=row["set_number"], repetitions=row["repetitions"], weight=row["weight"])
+        return Set(
+            set_id=row["id"],
+            exercise_id=row["exercise_id"],
+            set_number=row["set_number"],
+            repetitions=row["repetitions"],
+            weight=row["weight"]
+        )
     return None
 
 
@@ -37,7 +42,8 @@ class SetRepository:
         '''
         cursor = self._connection.cursor()
         cursor.execute(
-            "insert into sets (exercise_id, set_number, repetitions, weight) values (?, ?, ?, ?) returning id",
+            '''insert into sets (exercise_id, set_number, repetitions, weight) 
+            values (?, ?, ?, ?) returning id''',
             (set_obj.exercise_id, set_obj.set_number,
              set_obj.repetitions, set_obj.weight)
         )
@@ -55,7 +61,8 @@ class SetRepository:
         '''
         cursor = self._connection.cursor()
         cursor.execute(
-            "select id, exercise_id, set_number, repetitions, weight from sets where exercise_id = ? order by set_number asc",
+            "select id, exercise_id, set_number, repetitions, weight "
+            "from sets where exercise_id = ? order by set_number asc",
             (exercise_id,)
         )
         rows = cursor.fetchall()
@@ -89,7 +96,8 @@ class SetRepository:
             raise ValueError("Set must have an ID to be updated")
         cursor = self._connection.cursor()
         cursor.execute(
-            "update sets set set_number = ?, repetitions = ?, weight = ? where id = ?",
+            "update sets set set_number = ?, repetitions = ?, weight = ? "
+            "where id = ?",
             (set_obj.set_number, set_obj.repetitions, set_obj.weight, set_obj.id)
         )
         self._connection.commit()
