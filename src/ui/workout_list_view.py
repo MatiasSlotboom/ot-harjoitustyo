@@ -3,6 +3,12 @@ from services.workout_service import workout_service
 
 
 class WorkoutListView:
+    '''
+    A class representing the workout list view in the application.
+    This view displays a list of saved workouts and allows the user to add,
+    view/edit, and delete workouts.
+    '''
+
     def __init__(self, root, handle_add_workout, handle_view_edit_workout):
         self._root = root
         self._handle_add_workout = handle_add_workout
@@ -14,9 +20,15 @@ class WorkoutListView:
         self._initialize()
 
     def pack(self):
+        '''
+        Packs the frame into the root window.
+        '''
         self._frame.pack(fill=constants.BOTH, expand=True)
 
     def destroy(self):
+        '''
+        Destroys the frame and its contents.
+        '''
         self._frame.destroy()
 
     def _initialize(self):

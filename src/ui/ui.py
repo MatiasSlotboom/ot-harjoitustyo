@@ -4,11 +4,19 @@ from ui.workout_view import WorkoutView
 
 
 class UI:
+    '''
+    A class representing the main user interface of the workout tracking application.
+    This class manages the different views of the application, including the workout list
+    and workout details views.
+    '''
     def __init__(self, root):
         self._root = root
         self._current_view = None
 
-    def start(self):
+    def start(self):    
+        '''
+        Starts the UI by displaying the workout list view.
+        '''
         self._show_workout_list_view()
 
     def _hide_current_view(self):

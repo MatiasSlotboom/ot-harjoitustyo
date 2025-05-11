@@ -2,6 +2,11 @@ from db.database_connection import get_database_connection
 
 
 def drop_tables(connection):
+    '''
+    Drops the existing tables in the database if they exist.
+    Args:
+        connection: The database connection object.
+    '''
     cursor = connection.cursor()
 
     cursor.execute("drop table if exists sets;")
@@ -12,6 +17,11 @@ def drop_tables(connection):
 
 
 def create_tables(connection):
+    '''
+    Creates the necessary tables in the database.
+    Args:
+        connection: The database connection object.
+    '''
     cursor = connection.cursor()
 
     cursor.execute("""
@@ -46,6 +56,9 @@ def create_tables(connection):
 
 
 def initialise_database():
+    '''
+    Initializes the database by dropping existing tables and creating new ones.
+    '''
     connection = get_database_connection()
     drop_tables(connection)
     create_tables(connection)

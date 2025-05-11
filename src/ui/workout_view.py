@@ -7,7 +7,22 @@ import datetime
 
 
 class WorkoutView:
+    '''
+    A class representing the workout view in the application.
+    This view allows the user to add, edit, and delete exercises and sets
+    associated with a workout. It also allows the user to save the workout
+    date and view the details of the workout.
+    '''
+
     def __init__(self, root, handle_back, workout_id=None):
+        '''
+        Initializes the WorkoutView with the given root window and callback
+
+        Args:
+            root: The root window of the application.
+            handle_back: A callback function to handle the back button action.
+            workout_id: The ID of the workout to load. If None, a new workout will be created.
+        '''
         self._root = root
         self._handle_back = handle_back
         self._workout_id = workout_id
@@ -157,7 +172,8 @@ class WorkoutView:
     def _handle_save_workout(self):
         date_str = self._workout_date_var.get()
         try:
-            parsed_date = datetime.datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S')
+            parsed_date = datetime.datetime.strptime(
+                date_str, '%Y-%m-%d %H:%M:%S')
             formatted_date_str = parsed_date.strftime('%Y-%m-%d %H:%M:%S')
         except ValueError:
             messagebox.showerror(
@@ -166,11 +182,13 @@ class WorkoutView:
 
         try:
             if self._workout_id:
-                workout_service.update_workout_date(self._workout_id, formatted_date_str)
+                workout_service.update_workout_date(
+                    self._workout_id, formatted_date_str)
                 messagebox.showinfo(
                     "Saved", "Workout date updated. Exercises/Sets are saved via their respective Add/Edit actions.")
             else:
-                new_workout = workout_service.create_workout(formatted_date_str)
+                new_workout = workout_service.create_workout(
+                    formatted_date_str)
                 self._workout_id = new_workout.id
                 messagebox.showinfo(
                     "Created", f"New workout created with ID: {self._workout_id}. You can now add exercises and sets.")

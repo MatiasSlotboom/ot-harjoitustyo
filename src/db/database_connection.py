@@ -6,6 +6,11 @@ connection.row_factory = sqlite3.Row
 
 
 def get_database_connection():
+    '''
+    Establishes a connection to the database.
+    Returns:
+        connection: The database connection object.
+    '''
     try:
         connection.execute("SELECT 1;")
     except:

@@ -2,6 +2,12 @@ from tkinter import Toplevel, Label, Entry, Button, Frame, StringVar
 
 
 class EntryDialog(Toplevel):
+    '''
+    A dialog to get user input for multiple fields.
+    This dialog is used to collect user input for various fields
+    and returns the input values as a dictionary.
+    '''
+
     def __init__(self, parent, title, fields):
         super().__init__(parent)
         self.transient(parent)

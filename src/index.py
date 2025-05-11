@@ -3,6 +3,10 @@ from ui.ui import UI
 
 
 def main():
+    '''
+    Main function to start the workout tracking application.
+    It initializes the main window and starts the UI.
+    '''
     window = Tk()
     window.title("Workout Tracking app")
     window.geometry("800x600")
